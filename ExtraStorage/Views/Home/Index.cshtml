@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    List<string> fileNames = System.IO.Directory.Exists(@"C:\mounts\files") ? System.IO.Directory.GetFiles(@"C:\mounts\files").ToList() : new List<string>();
+
+}
+
+<div>外部ストレージ追加の確認 Web アプリケーション</div>
+<hr />
+<div>ファイル名</div>
+@{
+    foreach(var name in fileNames)
+    {
+        <div>@name</div>
+    }
+}

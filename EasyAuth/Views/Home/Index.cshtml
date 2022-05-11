@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>Easy Auth Check Web Application.</div>
+<hr />
+<div>Is Authenticated? : @User?.Identity?.IsAuthenticated</div>
+<div>Name : @User?.Claims.ToList().SingleOrDefault(m => m.Type == "name")</div>
+<div>Email : @User?.Claims.ToList().SingleOrDefault(m => m.Type == "email")</div>
+
+@{
+    if (User?.Identity?.IsAuthenticated != null ? User.Identity.IsAuthenticated : false)
+    {
+        <div><a href="/.auth/logout">Sign out</a></div>
+    }
+}
