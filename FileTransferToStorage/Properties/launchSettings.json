@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "FileTransferToStorage": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ENVIRONMENT": "Development",
+        "HOME": "C:\\mounts\\files"
+      }
+    }
+  }
+}

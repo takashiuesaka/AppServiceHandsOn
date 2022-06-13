@@ -1,0 +1,30 @@
+﻿@model string[]
+@{
+    ViewData["Title"] = "File Uploader to local disk";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>File Uploader to local disk</title>
+</head>
+<body>
+    <h2>Uploaded Files</h2>
+    <div>
+        @foreach (string? file in Model)
+        {
+            <div><span>@file</span></div>
+        }
+    </div>
+    <hr />
+    <div> 
+        @using (Html.BeginForm("Upload", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <input type="file" name="uploadFile" />
+            <input type="submit" value="アップロード" />
+        }
+    </div>
+</body>
+</html>
