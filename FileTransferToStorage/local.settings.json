@@ -1,6 +1,0 @@
-{
-  "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=msuesakawebjobtest;AccountKey=RNA0UxZo+l8YI6Hh9JTOFI3/DuN9DOFcCApQ5kPGAC0XJaYTTAtbm9EmE1Ul7ZO0RdoHzyk42EMc+ASt3MKheA==;EndpointSuffix=core.windows.net",
-  "uploadFileDestDirName": "uploadfiles",
-  "QueueName": "uploadfilenames",
-  "blobContainerName": "uploadfiles"
-}
